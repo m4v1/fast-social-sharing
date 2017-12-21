@@ -27,15 +27,15 @@ class FastSocialSharingPublic {
 	 */
    public function run()
    {
-    	add_action( 'wp_enqueue_scripts', array($this, 'enqueue_styles') );
+      add_action( 'wp_footer', array($this, 'enqueue_styles_footer'));
    }
 
-	/**
-	 * Register the stylesheets for the public-facing side of the site.
+  /**
+	 * Register the stylesheets for the public-facing side of the site in the footer.
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles() {
+	public function enqueue_styles_footer() {
 
 		wp_register_style( 'fast-social-sharing', plugin_dir_url( __FILE__ ) . 'css/fast-social-sharing-public.css', array(), false, 'all' );
 		wp_enqueue_style('fast-social-sharing');

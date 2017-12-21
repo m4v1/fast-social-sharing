@@ -34,7 +34,7 @@ class FastSocialSharing
     // Call a separate object to manage hooks
     // Call admin area object
 
-    public function displayFastSocialSharing( $content = null )
+    public function displayFastSocialSharing($content = null)
     {
         global $post;
 
@@ -46,11 +46,10 @@ class FastSocialSharing
 
         // Get Post Thumbnail for pinterest
         //$fssThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
-        if ( is_page() || is_single() ) {
-        	$fssThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
-        }
-        else {
-        	$fssThumbnail[0] = '';
+        if (is_page() || is_single()) {
+            $fssThumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+        } else {
+            $fssThumbnail[0] = '';
         }
 
         // Construct sharing URL without using any script
@@ -86,36 +85,35 @@ class FastSocialSharing
 
     public function fssManageHooks()
     {
-      add_shortcode( 'fast-social-sharing', array( $this, 'displayFastSocialSharing') );
+        add_shortcode('fast-social-sharing', array( $this, 'displayFastSocialSharing'));
     }
 
     public function fssAdminArea()
     {
-      /**
-		   * The class responsible for defining all actions that occur in the admin area.
-		   */
-		  require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-fast-social-sharing-admin.php';
+        /**
+             * The class responsible for defining all actions that occur in the admin area.
+             */
+        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-fast-social-sharing-admin.php';
 
-      $fssAdmin = new FastSocialSharingAdmin();
-      $fssAdmin->run();
+        $fssAdmin = new FastSocialSharingAdmin();
+        $fssAdmin->run();
     }
 
     public function fssPublicArea()
     {
-      /**
-		   * The class responsible for defining all actions that occur in the admin area.
-		   */
-		  require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-fast-social-sharing-public.php';
+        /**
+             * The class responsible for defining all actions that occur in the admin area.
+             */
+        require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-fast-social-sharing-public.php';
 
-      $fssPublic = new FastSocialSharingPublic();
-      $fssPublic->run();
-
+        $fssPublic = new FastSocialSharingPublic();
+        $fssPublic->run();
     }
 
     public function run()
     {
-      $this->fssAdminArea();
-      $this->fssManageHooks();
-      $this->fssPublicArea();
+        $this->fssAdminArea();
+        $this->fssManageHooks();
+        $this->fssPublicArea();
     }
 }
