@@ -26,8 +26,8 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if (! defined('WPINC')) {
+    die;
 }
 
 /**
@@ -35,13 +35,13 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'FAST_SOCIAL_SHARING_VERSION', '1.0.0' );
+define('FAST_SOCIAL_SHARING_VERSION', '1.0.0');
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-fast-social-sharing.php';
+require plugin_dir_path(__FILE__) . 'includes/class-fast-social-sharing.php';
 
 /**
  *  Add a shortcode to display the widget

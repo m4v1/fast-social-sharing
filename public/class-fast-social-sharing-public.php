@@ -20,37 +20,35 @@
  * @subpackage Fast_Social_Sharing/public
  * @author     M4v1 <email@example.com>
  */
-class FastSocialSharingPublic {
+class FastSocialSharingPublic
+{
 
-	/**
-	 * Initialize the class and set its properties.
-	 */
-   public function run()
-   {
-      add_action( 'wp_footer', array($this, 'enqueue_styles_footer'));
-   }
+    /**
+     * Initialize the class and set its properties.
+     */
+    public function run()
+    {
+        add_action('wp_footer', array($this, 'enqueue_styles_footer'));
+    }
 
-  /**
-	 * Register the stylesheets for the public-facing side of the site in the footer.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_styles_footer() {
+    /**
+       * Register the stylesheets for the public-facing side of the site in the footer.
+       *
+       * @since    1.0.0
+       */
+    public function enqueue_styles_footer()
+    {
+        wp_register_style('fast-social-sharing', plugin_dir_url(__FILE__) . 'css/fast-social-sharing-public.css', array(), false, 'all');
+        wp_enqueue_style('fast-social-sharing');
+    }
 
-		wp_register_style( 'fast-social-sharing', plugin_dir_url( __FILE__ ) . 'css/fast-social-sharing-public.css', array(), false, 'all' );
-		wp_enqueue_style('fast-social-sharing');
-
-	}
-
-	/**
-	 * Register the JavaScript for the public-facing side of the site.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
-
-		wp_enqueue_script( $this->fast_social_sharing, plugin_dir_url( __FILE__ ) . 'js/fast-social-sharing-public.js', array( 'jquery' ), $this->version, false );
-
-	}
-
+    /**
+     * Register the JavaScript for the public-facing side of the site.
+     *
+     * @since    1.0.0
+     */
+    public function enqueue_scripts()
+    {
+        wp_enqueue_script($this->fast_social_sharing, plugin_dir_url(__FILE__) . 'js/fast-social-sharing-public.js', array( 'jquery' ), $this->version, false);
+    }
 }

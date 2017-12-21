@@ -23,18 +23,19 @@
 
 class FastSocialSharingAdmin
 {
-  public function addAdminPage()
-  {
-    add_menu_page( 'Fast Social Sharing Page', 'Fast Social Sharing', 'manage_options', 'fast-social-sharing', array( $this, 'displayAdminPage') );
-  }
+    public function addAdminPage()
+    {
+        add_menu_page('Fast Social Sharing Page', 'Fast Social Sharing', 'manage_options', 'fast-social-sharing', array( $this, 'displayAdminPage'));
+    }
 
-  public function displayAdminPage(){
-    echo "<h1>Hello World!</h1>";
-  }
+    public function displayAdminPage()
+    {
+        echo "<h1>Hello World!</h1>";
+    }
 
-  public function run()
-  {
-    //$this->addAdminPage();
-    add_action('admin_menu', array( $this, 'addAdminPage'));
-  }
+    public function run()
+    {
+        //$this->addAdminPage();
+        add_action('admin_menu', array( $this, 'addAdminPage'));
+    }
 }
