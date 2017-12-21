@@ -1,0 +1,99 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ @media screen and (min-width: 1024px) {
+    .fss-whatsapp {
+	display: none !important;
+    }
+}
+
+.fss-link {
+    padding: 2px 8px 4px 8px !important;
+    color: white;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+    margin-top: 2px;
+    display: inline-block;
+    text-decoration: none;
+    background-image: url('../images/social-sharing-icons.jpg');
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+    margin-left: .3rem;
+    margin-right: .3rem;
+}
+
+.fss-link:hover,.fss-link:active {
+    color: white;
+}
+
+.fss-twitter {
+    background-position: -42px 0;
+}
+
+.fss-twitter:hover,.fss-twitter:active {
+    opacity:0.8;
+}
+
+.fss-facebook {
+    background-position: 0 0;
+}
+
+.fss-facebook:hover,.fss-facebook:active {
+    opacity:0.8;
+}
+
+.fss-googleplus {
+    background-position: -84px 0;
+}
+
+.fss-googleplus:hover,.fss-googleplus:active {
+    opacity:0.8;
+}
+
+.fss-pinterest {
+    background-position: -126px 0;
+}
+
+.fss-pinterest:hover,.fss-pinterest:active {
+    opacity:0.8;
+}
+
+.fss-email {
+    background-position: -168px 0;
+}
+
+.fss-email:hover,.fss-email:active {
+    opacity:0.8;
+}
+
+.fss-linkedin {
+    background: #0074A1;
+}
+
+.fss-linkedin:hover,.fss-linkedin:active {
+    background: #006288;
+}
+
+.fss-whatsapp {
+    background: #43d854;
+}
+
+.fss-whatsapp:hover,.fss-whatsapp:active {
+    background: #009688;
+}
+
+.fss-social {
+    margin: 20px 0px 25px 0px;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+}
