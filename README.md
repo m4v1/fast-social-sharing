@@ -1,1 +1,1 @@
-fast-social-sharing
+Fast social sharing plugin for Wordpress
